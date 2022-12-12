@@ -1,8 +1,5 @@
 // TODO:
-// 1) Add "Done" and "Remove" buttons to each TODO item 
-// 1.1) Update 'list' from array to object; each list item should have item name and status (is completed)
-// 1.2) Done -> Strikethrough, set status to 'is completed'
-// 1.3) Remove -> delete from string, remove item from object
+// 1) Comlpete -> delete from string, remove item from array
 // 2) Use Tailwind to update visual
 
 // Done: 
@@ -30,17 +27,20 @@ function Form() {
         setInput(""); // Clear input field after adding todo item
     }
 
-    function handleItemCount() {
-        return list.length;
+    function handleComplete(e) {
+        e.preventDefault();  //Prevent page auto refresh on click
+        console.log("clicked on complete");
+        console.log("Index of item clicked in array: ")
     }
 
     return (<form>
         <input onChange={handleInput} name="todo-input" placeholder="Add TODO here" value={input} autoFocus></input>
         <button onClick={handleList}>Add Item</button>
-        <ul>{list.map((todoItem) => <ItemList key={uuidv4()} text={todoItem} />)}</ul>
-        <p>{handleItemCount()} left to do</p>
+        <ul>{list.map((todoItem, index) => <ItemList key={uuidv4()} text={todoItem} complete={handleComplete} />)}</ul>
+        <p>{list.length} left to do</p>
     </form>);
 
 }
 
 export default Form;
+
