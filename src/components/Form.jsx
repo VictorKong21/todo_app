@@ -3,6 +3,7 @@
 // 1.1) Update 'list' from array to object; each list item should have item name and status (is completed)
 // 1.2) Done -> Strikethrough, set status to 'is completed'
 // 1.3) Remove -> delete from string, remove item from object
+// 2) Use Tailwind to update visual
 
 // Done: 
 // 1) Autofocus input field after submit
