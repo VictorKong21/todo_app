@@ -30,7 +30,7 @@ function Form() {
     function handleComplete(e) {
         e.preventDefault();  //Prevent page auto refresh on click
         console.log("clicked on complete");
-        console.log("Index of item clicked in array: ")
+        // console.log("Index of item clicked in array: ")
     }
 
     return (<form>
