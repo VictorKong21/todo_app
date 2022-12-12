@@ -1,10 +1,21 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
-function ItemList(i) {
-    return <li key={uuidv4()}>{i}
-        <button>Complete</button>
-        <button>Remove</button>
+
+function ItemList(props) {
+
+    function handleComplete(e) {
+        e.preventDefault();  //Prevent page auto refresh on click
+        console.log("clicked on complete");
+    }
+
+    function handleRemove(e) {
+        e.preventDefault();  //Prevent page auto refresh on click
+        console.log("clicked on remove");
+    }
+
+    return <li>{props.text}
+        <button onClick={handleComplete}>Complete</button>
+        <button onClick={handleRemove}>Remove</button>
     </li>
 }
 
