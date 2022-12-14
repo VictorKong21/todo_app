@@ -21,7 +21,7 @@ h1 {
   font-size: 2em;
   line-height: 1.5;
   font-weight: bold;
-  /* color: #38e54d; */
+  /* color: #0276ff; */
 }
 
 p {
@@ -87,7 +87,12 @@ button:hover {
 }
 
 .list-item:hover {
-  color: red;
+  /* color: red; */
   text-decoration: line-through;
   font-weight: bold;
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 20px;
 }
