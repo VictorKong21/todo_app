@@ -29,9 +29,9 @@ function Form() {
   function handleComplete(e, itemIndex) {
     e.preventDefault(); //Prevent page auto refresh on click
     setList((prevList) => {
-      return prevList.filter(
-        (listItem, index, array) => array[index] !== array[itemIndex]
-      );
+      return prevList.filter((listItem, index) => {
+        return index !== itemIndex;
+      });
     });
   }
 
@@ -51,7 +51,7 @@ function Form() {
             key={uuidv4()}
             text={todoItem}
             complete={handleComplete}
-            index={index}
+            id={index}
           />
         ))}
       </ul>

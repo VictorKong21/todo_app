@@ -4,7 +4,7 @@ function ItemList(props) {
   return (
     <li>
       {props.text}
-      <button onClick={(e) => props.complete(e, props.index)}>Complete</button>
+      <button onClick={(e) => props.complete(e, props.id)}>Complete</button>
     </li>
   );
 }
