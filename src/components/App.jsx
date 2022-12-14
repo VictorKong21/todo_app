@@ -1,10 +1,11 @@
 import React from "react";
 import Form from "./Form";
+import Title from "./Title";
 
 function App() {
   return (
     <div>
-      <h1>TODO</h1>
+      <Title />
       <Form />
     </div>
   );
