@@ -1,5 +1,5 @@
 // TODO:
-// 1) Use Tailwind to update visual
+// 1) Update visual
 
 // Done:
 // 1) Autofocus input field after submit
