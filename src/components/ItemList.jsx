@@ -2,10 +2,9 @@ import React from "react";
 
 function ItemList(props) {
   return (
-    <li>
+    <div onClick={(e) => props.complete(e, props.id)} className="list-item">
       {props.text}
-      <button onClick={(e) => props.complete(e, props.id)}>Complete</button>
-    </li>
+    </div>
   );
 }
 

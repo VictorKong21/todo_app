@@ -45,7 +45,7 @@ function Form() {
         autoFocus
       ></input>
       <button onClick={handleList}>Add Item</button>
-      <ul>
+      
         {list.map((todoItem, index) => (
           <ItemList
             key={uuidv4()}
@@ -54,7 +54,7 @@ function Form() {
             id={index}
           />
         ))}
-      </ul>
+      
       <p>{list.length} left to do</p>
     </form>
   );

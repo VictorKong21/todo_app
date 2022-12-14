@@ -4,7 +4,7 @@ import Title from "./Title";
 
 function App() {
   return (
-    <div>
+    <div className="main-body">
       <Title />
       <Form />
     </div>
