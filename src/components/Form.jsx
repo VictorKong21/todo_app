@@ -1,12 +1,12 @@
 // TODO:
-// 1) Comlpete -> delete from string, remove item from array
-// 2) Use Tailwind to update visual
+// 1) Use Tailwind to update visual
 
 // Done:
 // 1) Autofocus input field after submit
 // 2) Clear input field after submit
 // 3) Disable when empty item is added
 // 4) Add a count to number of TODOs
+// 5) Comlpete -> delete from string, remove item from array
 
 import React, { useState } from "react";
 import ItemList from "./ItemList";
@@ -26,10 +26,13 @@ function Form() {
     setInput(""); // Clear input field after adding todo item
   }
 
-  function handleComplete(e, index) {
+  function handleComplete(e, itemIndex) {
     e.preventDefault(); //Prevent page auto refresh on click
-    console.log("clicked on complete" + index);
-    // console.log("Index of item clicked in array: ")
+    setList((prevList) => {
+      return prevList.filter(
+        (listItem, index, array) => array[index] !== array[itemIndex]
+      );
+    });
   }
 
   return (
