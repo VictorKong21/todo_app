@@ -13,7 +13,7 @@ body {
 }
 
 .main-body {
-  margin: 30px 25%;
+  margin: 30px 20%;
 }
 
 h1 {
@@ -58,7 +58,7 @@ button {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
-  padding: 10px 21px;
+  padding: 10px 15px;
   text-align: center;
   text-transform: none;
   transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
@@ -66,15 +66,31 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-left: 30px;
+  margin-left: 5px;
 }
 
-button:active {
+.btn-add {
+  background-color: #0276ff;
+}
+
+.btn-add:active {
   background-color: #006ae8;
 }
 
-button:hover {
+.btn-add:hover {
   background-color: #1c84ff;
+}
+
+.btn-clear {
+  background-color: red;
+}
+
+.btn-clear:active {
+  background-color: rgb(220, 0, 0);
+}
+
+.btn-clear:hover {
+  background-color: rgb(250, 78, 78);
 }
 
 .list-item {

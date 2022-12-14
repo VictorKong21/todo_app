@@ -3,8 +3,8 @@ import React from "react";
 function Blurb() {
   return (
     <p>
-      Use the "Add Item" button to add new items. Hover and click on todo items
-      to delete.
+      "Add Item" button to add a new item. Click on todo item to delete a single
+      item and "Clear All" to remove all todo items.
     </p>
   );
 }

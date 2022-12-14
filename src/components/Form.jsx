@@ -1,13 +1,3 @@
-// TODO:
-// 1) Update visual
-
-// Done:
-// 1) Autofocus input field after submit
-// 2) Clear input field after submit
-// 3) Disable when empty item is added
-// 4) Add a count to number of TODOs
-// 5) Comlpete -> delete from string, remove item from array
-
 import React, { useState } from "react";
 import ItemList from "./ItemList";
 import { v4 as uuidv4 } from "uuid";
@@ -24,6 +14,10 @@ function Form() {
     e.preventDefault(); //Prevent page auto refresh on click
     input !== "" && setList((item) => [...item, input]); //Prevent user from adding empty todo item
     setInput(""); // Clear input field after adding todo item
+  }
+
+  function handleClearAll() {
+    setList([]);
   }
 
   function handleComplete(e, itemIndex) {
@@ -44,7 +38,12 @@ function Form() {
         value={input}
         autoFocus
       ></input>
-      <button onClick={handleList}>Add Item</button>
+      <button onClick={handleList} className="btn-add">
+        Add Item
+      </button>
+      <button onClick={handleClearAll} className="btn-clear">
+        Clear All
+      </button>
 
       {list.map((todoItem, index) => (
         <ItemList
